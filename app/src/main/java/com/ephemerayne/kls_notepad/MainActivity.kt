@@ -1,8 +1,10 @@
 package com.ephemerayne.kls_notepad
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.ephemerayne.kls_notepad.model.NoteCreationActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +15,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         addNoteButton = findViewById(R.id.add_note_button)
         addNoteButton.setOnClickListener {
-            println("click")
+            //открытие Активити
+            val intent = Intent(this, NoteCreationActivity::class.java)
+            startActivity(intent)
         }
     }
 }
