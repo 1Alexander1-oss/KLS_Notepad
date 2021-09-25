@@ -9,10 +9,12 @@
     tools:context=".model.NoteCreationActivity">
 
     <EditText
+        android:hint="@string/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:hint="@string/description"
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_weight="1"
