@@ -15,15 +15,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_note_view)
         addNoteButton = findViewById(R.id.add_note_button)
         addNoteButton.setOnClickListener {
             //открытие Активити
             val intent = Intent(this, NoteCreationActivity::class.java)
             startActivity(intent)
         }
+
         button = findViewById(R.id.button)
         button.setOnClickListener{
-            val intent = Intent( this, NoteViewActivity::class.java)
+            val intent = Intent( this, NoteViewActivity ::class.java)
             startActivity(intent)
         }
 
