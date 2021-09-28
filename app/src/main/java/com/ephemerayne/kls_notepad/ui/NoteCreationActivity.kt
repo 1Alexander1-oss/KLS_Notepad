@@ -1,7 +1,7 @@
-package com.ephemerayne.kls_notepad.model
+package com.ephemerayne.kls_notepad.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.ephemerayne.kls_notepad.R
 
 class NoteCreationActivity : AppCompatActivity() {

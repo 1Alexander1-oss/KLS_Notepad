@@ -1,4 +1,4 @@
-package com.ephemerayne.kls_notepad.model
+package com.ephemerayne.kls_notepad.database
 
 import android.provider.BaseColumns
 

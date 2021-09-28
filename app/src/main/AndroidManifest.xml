@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KLS_Notepad">
         <activity
-            android:name=".model.NoteCreationActivity"
+            android:name=".ui.NoteCreationActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
