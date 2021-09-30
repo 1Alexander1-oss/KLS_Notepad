@@ -15,7 +15,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setContentView(R.layout.activity_note_view)
+        /**
+         * это устанавливает макет. У тебя должен быть макет Менй Активити
+         * как на 17 строчке.
+         *
+         * А ты пытаешься еще поставить из другого активити макет.
+         *
+         * делай верстку. Открытие нормлаьно сделал как надо.
+         * */
+//
         addNoteButton = findViewById(R.id.add_note_button)
         addNoteButton.setOnClickListener {
             //открытие Активити
@@ -24,8 +32,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         button = findViewById(R.id.button)
-        button.setOnClickListener{
-            val intent = Intent( this, NoteViewActivity ::class.java)
+        button.setOnClickListener {
+            val intent = Intent(this, NoteViewActivity::class.java)
             startActivity(intent)
         }
 
