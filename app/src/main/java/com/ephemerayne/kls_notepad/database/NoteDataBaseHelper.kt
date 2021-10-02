@@ -8,11 +8,13 @@ class NoteDataBaseHelper(context: Context) : SQLiteOpenHelper(
     context, NoteDataBase.DATABASE_NAME,
     null, NoteDataBase.DATABASE_VERSION
 ) {
-    override fun onCreate(p0: SQLiteDatabase?) {
-        TODO("Not yet implemented")
+    override fun onCreate(db: SQLiteDatabase?) {
+        db?.execSQL(NoteDataBase.CREATE_TABLE)
+
     }
 
-    override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+    override fun onUpgrade(db: SQLiteDatabase?, p1: Int, p2: Int) {
+        db?.execSQL(NoteDataBase.SQL_DELETE_TABLE)
+        onCreate(db)
     }
 }

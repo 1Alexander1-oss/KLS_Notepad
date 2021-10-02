@@ -10,4 +10,4 @@ class NoteCreationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_note_creation)
     }
 
-}
+} // обьявить все View в onCreate (EditText, Button), создать click на кнопку,(сохранение полей по клику в DB)
