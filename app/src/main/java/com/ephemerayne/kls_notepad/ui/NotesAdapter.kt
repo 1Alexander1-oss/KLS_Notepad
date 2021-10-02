@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ephemerayne.kls_notepad.R
 import com.ephemerayne.kls_notepad.model.Note
 
-class NotesAdapter : RecyclerView.Adapter<NoteViewHolder>() {
+class NotesAdapter(
+    private val noteItemClickListener: NoteItemClickListener,
+) : RecyclerView.Adapter<NoteViewHolder>() {
     private val notes: ArrayList<Note> = ArrayList()
 
     fun setNotes(notes: List<Note>) {
@@ -16,8 +18,14 @@ class NotesAdapter : RecyclerView.Adapter<NoteViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
-        return NoteViewHolder(LayoutInflater.from(parent.context)
-            .inflate(R.layout.note_item, parent, false)) // "раздули" макет для item
+        return NoteViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.note_item,
+                parent,
+                false,
+            ),
+            noteItemClickListener,
+        ) // "раздули" макет для item
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {

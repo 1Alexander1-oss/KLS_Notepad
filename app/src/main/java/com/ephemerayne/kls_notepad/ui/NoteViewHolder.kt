@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ephemerayne.kls_notepad.R
 import com.ephemerayne.kls_notepad.model.Note
 
-class NoteViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
+class NoteViewHolder(
+    private val itemView: View,
+    private val noteItemClickListener: NoteItemClickListener,
+) : RecyclerView.ViewHolder(itemView) {
 
     fun setContent(note: Note) {
         val titleView = itemView.findViewById<TextView>(R.id.title)
@@ -14,5 +17,9 @@ class NoteViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemV
         titleView.text = note.title
         descriptionView.text = note.description // создан класс управляющий элементом списка
         // ViewHolder
+
+        itemView.setOnClickListener {
+            noteItemClickListener.onNoteClick(note)
+        }
     }
 }

@@ -9,7 +9,7 @@ import com.ephemerayne.kls_notepad.R
 import com.ephemerayne.kls_notepad.model.Note
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NoteItemClickListener {
     lateinit var addNoteButton: FloatingActionButton
     lateinit var recycler: RecyclerView
     private val fakeNotes: List<Note> = listOf(
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         recycler = findViewById(R.id.recycler)
-        val adapter = NotesAdapter()
+        val adapter = NotesAdapter(this)
         recycler.adapter = adapter // устанавливаю адаптер в ресайклер
         recycler.layoutManager = LinearLayoutManager(this)
         adapter.setNotes(fakeNotes)
@@ -34,5 +34,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, NoteCreationActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onNoteClick(note: Note) {
+        println(note)
     }
 }
