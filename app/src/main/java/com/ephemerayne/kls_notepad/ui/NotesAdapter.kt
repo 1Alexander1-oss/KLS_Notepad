@@ -17,7 +17,7 @@ class NotesAdapter(
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder { // создание экземпляра ViewHoler для каждого item
         return NoteViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 R.layout.note_item,

@@ -4,4 +4,4 @@ import com.ephemerayne.kls_notepad.model.Note
 
 interface NoteItemClickListener {
     fun onNoteClick(note: Note)
-}
+} // создание собственного ClickListenera
