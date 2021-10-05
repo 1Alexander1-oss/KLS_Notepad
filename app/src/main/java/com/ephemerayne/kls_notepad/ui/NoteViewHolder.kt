@@ -12,7 +12,7 @@ class NoteViewHolder(
 ) : RecyclerView.ViewHolder(itemView) {
 
     fun setContent(note: Note) {
-        val titleView = itemView.findViewById<TextView>(R.id.title)
+        val titleView = itemView.findViewById<TextView>(R.id.view_title)
         val descriptionView = itemView.findViewById<TextView>(R.id.view_description)
         titleView.text = note.title
         descriptionView.text = note.description // создан класс управляющий элементом списка

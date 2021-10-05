@@ -7,9 +7,10 @@ import com.ephemerayne.kls_notepad.R
 import com.ephemerayne.kls_notepad.model.Note
 
 class NoteViewActivity : AppCompatActivity() {
-    companion object{
+    companion object {
         const val KEY_TITLE = "KEY_TITLE"
-        const val KEY_DESCRIPTION = "KEY_DESCRIPTION" // создание ключа для последующей передачи значений по ключу
+        const val KEY_DESCRIPTION =
+            "KEY_DESCRIPTION" // создание ключа для последующей передачи значений по ключу
     }
 
     private lateinit var title: TextView
@@ -24,11 +25,15 @@ class NoteViewActivity : AppCompatActivity() {
             description = intent.getStringExtra(KEY_DESCRIPTION).orEmpty() // получение значения по ключу
         )
 
-        title = findViewById(R.id.title)
+        title = findViewById(R.id.view_title)
         title.text = note.title
         description = findViewById(R.id.view_description)
         description.text = note.description
 
+    }
+
+    private fun Note(title: String, description: String): Note {
+        return Note("", "")
     }
 
 }

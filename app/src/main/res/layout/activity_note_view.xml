@@ -9,7 +9,7 @@
     tools:context=".ui.NoteViewActivity">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/view_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/title"
@@ -28,7 +28,7 @@
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/floating_action_button"
         android:layout_width="239dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
